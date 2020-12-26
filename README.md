@@ -1,7 +1,7 @@
 # schdule_record
 It is a convenient program for secretary who needs to record the schedule for his/her manager.  
 
-#Notice that the program include the Chinese character.
+#Notice that the program include the Chinese character.  
 This program is designed for the administrator purpose.
 For some very busy Boss or leader, their schedules must be full.
 And their secretaryies have to arrange the schedule for them by
@@ -10,7 +10,11 @@ A easy input system can help a secretary finish the work more correctly and
 efficiently. With the standard flow, we can avoid miss some important information
 and speed up work.
 
-In this folder, there are 1 python module and 1 main program (example).
+In this folder, there are
+example.py : The main program to output the schedule.
+print_useful.py: Some modules here to help input sata more flexible.
+README.MD: Introduce this program.
+
 Execute the program by doing
 python3 example.py
 And you can modify the example to make the output fit what you want.
