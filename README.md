@@ -11,9 +11,9 @@ efficiently. With the standard flow, we can avoid miss some important informatio
 and speed up work.
 
 In this folder, there are
-example.py : The main program to output the schedule.
-print_useful.py: Some modules here to help input sata more flexible.
-README.MD: Introduce this program.
+example.py : The main program to output the schedule.  
+print_useful.py: Some modules here to help input sata more flexible.  
+README.MD: Introduce this program.  
 
 Execute the program by doing
 python3 example.py
