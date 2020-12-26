@@ -18,7 +18,9 @@ info_add("聯絡人、頭銜及聯絡電話",f)
 info_in("業務科長",f,True)
 info_in("業務承辦",f,True)
 test,test1=1,1
-ttime=input("輸入開始結束時間，格式如 12001400 或1200")
+print("若時間為12:00-14:00")
+print("請輸入12001400")
+ttime=input("輸入開始結束時間: ")
 if (len(ttime)==8):
     print("活動時間 (%s:%s - %s:%s):" %(ttime[0:2],ttime[2:4],ttime[4:6],ttime[6:8]))
     change = input("不需要詳細流程?(y)或者任意鍵繼續")
@@ -32,7 +34,12 @@ if (len(ttime)==4):
     print("活動時間: %s:%s 開始" %(ttime[0:2],ttime[2:4]),file=f)
 test2=1
 while(test2==1 and test1==1 ):
-    scheduletime=input("輸入流程時間，格式如 1200140015001600 ，共有3個行程")
+    print("範例：若時間為")
+    print("12:00 - 1300")
+    print("13:00 - 1400")
+    print("14:00 - 1500")
+    print("請輸入1200130014001500")
+    scheduletime=input("輸入流程時間: ")
     length= len(scheduletime)
     numschedule=int(length/4-1)
     if (length%4==0):
@@ -43,7 +50,7 @@ while(test2==1 and test1==1 ):
 i=0
 schedule_box=[]
 while(test==1):
-    print(len(schedule_box),numschedule)
+    print("第%d個行程，共%d個",%(len(schedule_box)+1,numschedule))
     schedule=input("輸入流程內容")
     if (schedule != ""):
         schedule_box.append(schedule)
