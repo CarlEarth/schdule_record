@@ -1,8 +1,9 @@
 # Unicode string
 from print_useful import info_in, info_add
-import datetime
-date = datetime.date.today()
-filename=("登記行程輸出"+str(date.month)+str(date.day)+".txt")
+from datetime import datetime
+now = datetime.now()
+#date = datetime.date.today()
+filename=("登記行程輸出"+str(now.strftime("%m"))+str(now.strftime("%d"))+".txt")
 print(filename)
 f = open(filename,'a',encoding="utf-8")
 print("---------------------" , file=f)
@@ -13,7 +14,7 @@ type1=["縣長行程","邀請函","LINE 訊息","函 登行程","函","開會通
 location = input("輸入詳細地點: ")
 print("地點:",location,file=f)
 name = input("輸入承辦人的名字: ")
-print("<%s> %s (%s%s登)" %(type1[int(number)-1],name,date.month,date.day), file=f)
+print("<%s> %s (%s%s登)" %(type1[int(number)-1],name,now.strftime("%m"),now.strftime("%d")), file=f)
 info_add("聯絡人、頭銜及聯絡電話",f)
 info_in("業務科長",f,True)
 info_in("業務承辦",f,True)
