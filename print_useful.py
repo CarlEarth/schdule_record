@@ -86,3 +86,26 @@ def time_table(test1,f, test2=1):
                   %(time[i:i+2],time[i+2:i+4],
                     time[i+4:i+6],time[i+6:i+8],schedule_box[j])
                   ,file=f)
+def activity_time(property,f):
+    xtt=0
+    name=["活動","會議"]
+    while(xtt==0):
+        ttime=input("輸入開始結束時間，格式如 12001400 或1200: ")
+        if (len(ttime)==8):
+            xtt=1
+            print("%s時間 (%s:%s - %s:%s):" %(name[property],ttime[0:2],ttime[2:4],ttime[4:6],ttime[6:8]))
+            change = input("不需要詳細流程?(y)或者任意鍵繼續")
+            if (change=="y"):
+                sche=0
+                print("%s時間: %s:%s - %s:%s" %(name[property],ttime[0:2],ttime[2:4],ttime[4:6],ttime[6:8]),file=f)
+            else:
+                print("%s流程(%s:%s - %s:%s):" %(name[property],ttime[0:2],ttime[2:4],ttime[4:6],ttime[6:8]),file=f)
+                sche=1
+        elif (len(ttime)==4):
+            xtt=1
+            sche=0
+            print("%s時間: %s:%s 開始" %(name[property],ttime[0:2],ttime[2:4]),file=f)
+        else:
+            xtt=0
+            print("輸入錯誤｀請重新輸入")
+    return sche
