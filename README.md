@@ -10,7 +10,7 @@ A easy input system can help a secretary finish the work more correctly and
 efficiently. With the standard flow, we can avoid miss some important information
 and speed up work.
 
-In this folder, there are
+In this folder, there are  
 example.py : The main program to output the schedule.  
 print_useful.py: Some modules here to help input sata more flexible.  
 README.MD: Introduce this program.  
